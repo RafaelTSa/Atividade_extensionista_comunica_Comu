@@ -1,0 +1,182 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8; /* Fundo suave */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Largura máxima para telas grandes */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* CORES PRINCIPAIS */
+:root {
+    --cor-primaria: #007bff; /* Azul para links e botões */
+    --cor-secundaria: #ff6f61; /* Cor de destaque (feminina/solidariedade) */
+    --cor-fundo-escuro: #222;
+    --cor-texto-claro: #fff;
+}
+
+/* 1. CABEÇALHO (HEADER) */
+header {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-claro);
+    padding: 10px 0;
+    position: sticky; /* Fica fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+}
+
+nav a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* 2. SEÇÃO HERO (INTRODUÇÃO) */
+.hero {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #ff8e83;
+}
+
+/* 3. SEÇÕES PADRÃO */
+.section-padrao {
+    padding: 40px 0;
+}
+
+.section-padrao h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: var(--cor-primaria);
+}
+
+.bg-cinza {
+    background-color: #eee;
+}
+
+/* 4. SEÇÃO CONTATO */
+.contact-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-grid > div {
+    flex: 1;
+}
+
+.map-placeholder {
+    background-color: #ddd;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 5. RODAPÉ */
+footer {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-claro);
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.social-links a {
+    color: var(--cor-texto-claro);
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* =================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ================================= */
+@media (max-width: 768px) {
+    /* Ajusta a navegação para empilhar */
+    .nav-content {
+        flex-direction: column;
+    }
+    nav a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+
+    /* Reduz o tamanho da fonte do Hero */
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    /* Empilha a seção de Contato */
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    /* Empilha o conteúdo do rodapé */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        margin-top: 10px;
+    }
+}
