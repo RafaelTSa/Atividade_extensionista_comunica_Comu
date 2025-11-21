@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
 
@@ -9,5 +10,6 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    # Roda o servidor de desenvolvimento
-    app.run(debug=True)
+    # O modo de depuração é ativado se a variável de ambiente FLASK_DEBUG for '1'
+    debug_mode = os.environ.get('FLASK_DEBUG') == '1'
+    app.run(debug=debug_mode)
