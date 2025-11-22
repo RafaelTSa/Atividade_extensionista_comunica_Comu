@@ -105,6 +105,25 @@ nav a:hover {
     background-color: #eee;
 }
 
+/* 3.1. FORMATACAO DE CONTEUDO ESPECIFICO (LISTAS E SUBTITULOS) */
+.section-padrao ul {
+    list-style-type: disc;
+    margin-left: 40px; 
+    margin-bottom: 25px;
+}
+
+.section-padrao ul li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.section-padrao h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: var(--cor-secundaria); 
+}
+
 /* 4. SEÇÃO CONTATO */
 .contact-grid {
     display: flex;
@@ -115,14 +134,11 @@ nav a:hover {
     flex: 1;
 }
 
-.map-placeholder {
-    background-color: #ddd;
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.forms-placeholder iframe {
+    min-height: 800px;
+    /* Remover a regra .map-placeholder, pois não será usada */
 }
+
 
 /* 5. RODAPÉ */
 footer {
@@ -178,5 +194,10 @@ footer {
     }
     .social-links {
         margin-top: 10px;
+    }
+    
+    /* Ajuste para iframe em celular */
+    .forms-placeholder iframe {
+        min-height: 600px; 
     }
 }
