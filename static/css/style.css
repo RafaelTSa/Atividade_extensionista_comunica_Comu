@@ -21,9 +21,9 @@ body {
 
 /* CORES PRINCIPAIS (Baseadas no Logo da Casa da Mulher Paulista) */
 :root {
-    --cor-principal-logo-rosa: #e91e63; /* Um rosa vibrante do logo (Magenta) */
-    --cor-secundaria-logo-roxo: #673ab7; /* Um roxo mais escuro do logo (Uva) */
-    --cor-fundo-claro: #F9F4F5; /* NOVO: Fundo suave */
+    --cor-principal-logo-rosa: #e91e63; /* Rosa vibrante (Magenta) */
+    --cor-secundaria-logo-roxo: #673ab7; /* Roxo escuro (Uva) */
+    --cor-fundo-claro: #F9F4F5; /* Fundo suave */
     --cor-texto-escuro: #333;
     --cor-texto-claro: #fff;
     --cor-cinza-claro: #f0f0f0; 
@@ -185,7 +185,32 @@ address {
     font-size: 1.1em;
 }
 
-/* 4. SEÇÃO CONTATO */
+/* 4. ESTILO DA SEÇÃO NOSSA EQUIPE */
+.equipe-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.equipe-texto {
+    flex: 1;
+    max-width: 50%; 
+}
+
+.equipe-foto {
+    flex: 1;
+    max-width: 50%; 
+}
+
+.equipe-foto img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+    object-fit: cover;
+}
+
+/* 5. SEÇÃO CONTATO */
 .contact-grid {
     display: flex;
     gap: 40px;
@@ -211,7 +236,7 @@ address {
     display: block; 
 }
 
-/* 5. RODAPÉ */
+/* 6. RODAPÉ */
 footer {
     background-color: var(--cor-secundaria-logo-roxo); 
     color: var(--cor-texto-claro);
@@ -262,6 +287,18 @@ footer {
     }
     .contact-grid > div {
         min-width: unset; 
+    }
+    
+    /* Empilha a seção da equipe */
+    .equipe-content {
+        flex-direction: column; 
+    }
+    .equipe-texto, .equipe-foto {
+        max-width: 100%; 
+        text-align: center;
+    }
+    .equipe-texto p {
+        text-align: left; 
     }
 
     /* Empilha o conteúdo do rodapé */
