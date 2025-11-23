@@ -56,3 +56,6 @@ Atividade_extensionista_comunica_Comu
 **Rafael**
 * **Instituição:** UFBRA
 * **Período:** Novembro - Dezembro 2025
+
+# Acesse o site (hospedagem provisoria):
+https://texera09.pythonanywhere.com
