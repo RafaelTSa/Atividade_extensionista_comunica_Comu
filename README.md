@@ -41,16 +41,17 @@ Esta seção contém o protótipo de um site institucional simples desenvolvido 
 4.  Acesse `http://127.0.0.1:5000/` no seu navegador.
 
 ### Estrutura de Pastas
+```
 Atividade_extensionista_comunica_Comu
 ├── app.py
 ├── README.md
 ├── templates
 │   └── index.html
 └── static
-    ├── css
-    │   └── style.css
-    └── img
-
+├── css
+│   └── style.css
+└── img
+```
 ## 👤 Desenvolvedor
 
 **Rafael**
